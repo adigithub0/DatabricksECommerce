@@ -11,13 +11,13 @@ spark = get_spark(APP_NAME)
 print("Spark Session Initialized")
 
 # 3. Ingestion
-print("⏳ Loading raw data...")
+print("Loading raw data...")
 orders_raw = load_csv(spark, ORDERS_PATH)
 customers_raw = load_csv(spark, CUSTOMERS_PATH)
 payments_raw = load_csv(spark, PAYMENTS_PATH)
 
 # 4. Transformations
-print("🧹 Cleaning and enriching data...")
+print("Cleaning and enriching data...")
 orders_cleaned = clean_orders(orders_raw)
 enriched_df = enrich_and_join(orders_cleaned, customers_raw, payments_raw)
 
