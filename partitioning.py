@@ -14,7 +14,7 @@ def write_partitioned_output(df, output_path):
         .partitionBy("year", "month")
         .parquet(output_path)  # Parquet is much faster and cheaper to query than CSV
     )
-    print(f"✅ Data partitioned by Year/Month and written to {output_path}")
+    print(f"Data partitioned by Year/Month and written to {output_path}")
 
 def write_summary_output(df, output_path):
     (
@@ -22,4 +22,4 @@ def write_summary_output(df, output_path):
         .mode("overwrite")
         .parquet(output_path)
     )
-    print(f"✅ Summary Data written to {output_path}")
+    print(f"Summary Data written to {output_path}")

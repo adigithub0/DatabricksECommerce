@@ -38,8 +38,8 @@ print("\n--- Category Summary ---")
 category_summary.show()
 
 # 6. Writing Data
-print("💾 Writing final outputs...")
+print("Writing final outputs...")
 write_partitioned_output(delivered_orders, OUTPUT_ENRICHED_PATH)
 write_summary_output(category_summary, OUTPUT_SUMMARY_PATH)
 
-print("🎉 Pipeline Execution Completed Successfully!")
+print("Pipeline Execution Completed Successfully!")
